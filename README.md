@@ -173,6 +173,32 @@ Please remember:
 
 ---
 
+## Usage
+
+Choose one of the three standalone versions:
+
+1. **English Python version** — use `trustcode.py` if you prefer English terminal output.
+
+```bash
+pip install -r requirements.txt
+python trustcode.py
+```
+
+2. **Chinese Python version** — use `trustcode_zh.py` if you prefer Chinese terminal output.
+
+```bash
+pip install -r requirements.txt
+python trustcode_zh.py
+```
+
+3. **HTML version** — use `index.html` if you do not want to install Python. Just open the file in a browser.
+
+```text
+index.html
+```
+
+---
+
 ## Roadmap
 
 - Add optional custom labels
@@ -344,6 +370,32 @@ TrustCode是辅助工具，不能替代官方身份认证。
 - 只应与可信任的人共享密钥。
 - 不要把它作为金融、法律、医疗或紧急情况的唯一判断依据。
 - 高风险场景下，应通过多个可靠渠道确认。
+
+---
+
+## 使用方法
+
+你可以从三个独立版本中选择一个：
+
+1. **英文Python版**：如果你想使用英文终端说明，运行 `trustcode.py`。
+
+```bash
+pip install -r requirements.txt
+python trustcode.py
+```
+
+2. **中文Python版**：如果你想使用中文终端说明，运行 `trustcode_zh.py`。
+
+```bash
+pip install -r requirements.txt
+python trustcode_zh.py
+```
+
+3. **HTML网页版**：如果你不想安装Python，直接用浏览器打开 `index.html`。
+
+```text
+index.html
+```
 
 ---
 
