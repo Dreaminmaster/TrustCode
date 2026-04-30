@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"TrustCode","version":"1.0.0","description":"Generate local one-time trust secrets and authenticator import QR codes.","action":{"default_title":"TrustCode","default_popup":"popup.html"},"icons":{"192":"../icons/icon-192.svg"},"permissions":["clipboardWrite"]}
