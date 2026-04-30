@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>TrustCode Web</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <div class="topbar">
+          <div class="brand"><div class="mark">T</div><span>TrustCode</span></div>
+          <button class="ghost" id="langBtn">中文</button>
+        </div>
+        <h1 data-en="One-time trust starts with a tiny secret." data-zh="一次性信任，从一个小密钥开始。">One-time trust starts with a tiny secret.</h1>
+        <p class="subtitle" data-en="A structured web version for maintaining the local TrustCode app." data-zh="这是用于维护 TrustCode 本地网页应用的结构化版本。">A structured web version for maintaining the local TrustCode app.</p>
+        <div class="chips"><div class="chip">Local-first</div><div class="chip">QR export</div><div class="chip">PWA-ready</div></div>
+      </div>
+      <div class="generator">
+        <div class="secret-card"><div class="label" data-en="Generated secret" data-zh="生成的密钥">Generated secret</div><div class="secret" id="secret"></div></div>
+        <div class="actions"><button class="primary" id="newBtn" data-en="Generate New Secret" data-zh="生成新密钥">Generate New Secret</button><button class="secondary" id="copySecretBtn" data-en="Copy Secret" data-zh="复制密钥">Copy Secret</button><button class="secondary" id="downloadQrBtn" data-en="Download QR" data-zh="下载二维码">Download QR</button></div>
+        <div class="card qrbox"><div class="qr"><canvas id="qrCanvas"></canvas></div><div><div class="label" data-en="Authenticator import URI" data-zh="验证器导入链接">Authenticator import URI</div><div class="uri" id="uri"></div></div></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
