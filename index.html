@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrustCode</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --card: rgba(255, 255, 255, 0.72);
+      --ink: #151515;
+      --muted: #6f6a60;
+      --line: rgba(0, 0, 0, 0.12);
+      --dark: #111111;
+      --radius: 28px;
+      --shadow: 0 26px 80px rgba(0, 0, 0, 0.14);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 12% 10%, rgba(255,255,255,0.92), transparent 30%), radial-gradient(circle at 90% 18%, rgba(211,199,174,0.72), transparent 32%), linear-gradient(135deg, #f8f4ec, #e9e0d0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+    }
+    .shell { width: min(1120px, 100%); display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 24px; }
+    .hero, .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); backdrop-filter: blur(22px); }
+    .hero { padding: 42px; min-height: 620px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; right: -130px; bottom: -150px; width: 360px; height: 360px; border-radius: 999px; background: rgba(0,0,0,0.045); }
+    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 84px; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 760; letter-spacing: -0.035em; }
+    .mark { width: 36px; height: 36px; border-radius: 13px; background: var(--dark); color: white; display: grid; place-items: center; font-size: 15px; }
+    h1 { margin: 0 0 28px; max-width: 760px; font-size: clamp(44px, 7vw, 84px); line-height: 0.92; letter-spacing: -0.08em; }
+    .subtitle { margin: 0; max-width: 680px; color: var(--muted); font-size: 18px; line-height: 1.65; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.52); color: var(--muted); padding: 9px 13px; font-size: 13px; }
+    .panel { padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+    .card { border: 1px solid var(--line); border-radius: 24px; padding: 22px; background: rgba(255,255,255,0.58); }
+    .black { background: var(--dark); color: white; border-color: var(--dark); }
+    .eyebrow { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .black .eyebrow { color: rgba(255,255,255,0.62); }
+    .big { font-size: 38px; line-height: 1.05; letter-spacing: -0.05em; font-weight: 800; }
+    p { color: var(--muted); line-height: 1.65; margin: 0; }
+    .black p { color: rgba(255,255,255,0.76); }
+    code { background: rgba(0,0,0,0.07); padding: 3px 6px; border-radius: 8px; }
+    .black code { background: rgba(255,255,255,0.13); }
+    .steps { display: grid; gap: 12px; }
+    .step { display: flex; gap: 12px; align-items: flex-start; }
+    .num { width: 28px; height: 28px; border-radius: 999px; background: var(--dark); color: white; display: grid; place-items: center; font-size: 13px; flex: 0 0 auto; }
+    @media (max-width: 880px) { body { padding: 18px; align-items: flex-start; } .shell { grid-template-columns: 1fr; } .hero { min-height: auto; padding: 28px; } .topbar { margin-bottom: 54px; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="topbar"><div class="brand"><div class="mark">T</div><span>TrustCode</span></div></div>
+      <h1>Shared trust, refreshed every 30 seconds.</h1>
+      <p class="subtitle">TrustCode is a local TOTP secret generator for authenticator apps, family anti-scam checks, private shared verification, and developer testing.</p>
+      <div class="chips"><div class="chip">Local-first</div><div class="chip">No account</div><div class="chip">QR export</div><div class="chip">Authenticator compatible</div></div>
+    </section>
+    <section class="panel">
+      <div class="card black"><div class="eyebrow">Python version</div><div class="big">Run locally.</div><p>Install dependencies with <code>pip install -r requirements.txt</code>, then run <code>python trustcode.py</code>.</p></div>
+      <div class="card"><div class="eyebrow">Use case</div><p>Share one secret with trusted family members. When someone claims to be you in an urgent situation, compare the current code before taking action.</p></div>
+      <div class="card"><div class="eyebrow">Flow</div><div class="steps"><div class="step"><div class="num">1</div><p>Generate a local secret with the Python tool.</p></div><div class="step"><div class="num">2</div><p>Import it into a TOTP-compatible authenticator app.</p></div><div class="step"><div class="num">3</div><p>Use the changing code as an extra trust check with people you already trust.</p></div></div></div>
+      <div class="card"><div class="eyebrow">Security note</div><p>TrustCode is a helper tool. It does not replace official identity verification, banking security, legal checks, or emergency services.</p></div>
+    </section>
+  </main>
+</body>
+</html>
