@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrustCode</title>
+  <link rel="stylesheet" href="popup.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="logo">T</div>
+      <div>
+        <h1>TrustCode</h1>
+        <p>Local shared verification secret</p>
+      </div>
+    </header>
+
+    <section class="secret-card">
+      <span>Secret</span>
+      <div id="secret" class="secret"></div>
+    </section>
+
+    <div class="actions">
+      <button id="newBtn">New</button>
+      <button id="copyBtn">Copy</button>
+    </div>
+
+    <section class="qr-card">
+      <canvas id="qrCanvas"></canvas>
+    </section>
+
+    <section class="tip">
+      <strong>Trust check</strong>
+      <p>Share only with trusted people. Anyone with the same secret can generate matching authenticator codes.</p>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
