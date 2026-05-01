@@ -26,21 +26,11 @@ TrustCode treats TOTP as more than a login feature. It turns any authenticator a
 
 ---
 
-## Live demo / GitHub Pages
+## Live demo
 
-After enabling GitHub Pages, the HTML app can be used as a public demo page:
+**👉 [https://dreaminmaster.github.io/TrustCode/](https://dreaminmaster.github.io/TrustCode/)**
 
-```text
-https://dreaminmaster.github.io/TrustCode/
-```
-
-GitHub Pages setup:
-
-1. Open repository **Settings**.
-2. Go to **Pages**.
-3. Select **Deploy from a branch**.
-4. Choose `main` and `/root`.
-5. Save and open the generated Pages URL.
+Try TrustCode directly in your browser — no installation required.
 
 ---
 
@@ -210,21 +200,11 @@ TrustCode不只是把TOTP当作登录安全功能，而是把任何验证器App�
 
 ---
 
-## 在线演示 / GitHub Pages
+## 在线演示
 
-开启GitHub Pages后，HTML应用可以作为公开演示页面使用：
+**👉 [https://dreaminmaster.github.io/TrustCode/](https://dreaminmaster.github.io/TrustCode/)**
 
-```text
-https://dreaminmaster.github.io/TrustCode/
-```
-
-开启方式：
-
-1. 打开仓库 **Settings**。
-2. 进入 **Pages**。
-3. 选择 **Deploy from a branch**。
-4. 选择 `main` 和 `/root`。
-5. 保存后打开生成的 Pages 链接。
+无需安装，直接在浏览器中体验 TrustCode。
 
 ---
 
