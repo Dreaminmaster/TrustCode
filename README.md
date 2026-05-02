@@ -8,7 +8,7 @@ A polished local TOTP toolkit for shared trust checks, authenticator-compatible 
 
 [English](#english) · [中文](#中文)
 
-![TrustCode Preview](docs/preview.svg)
+![TrustCode Preview](docs/preview.png)
 
 </div>
 
